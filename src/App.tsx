@@ -6,15 +6,19 @@ import { Input } from "./components/ui/input";
 import { Textarea } from "./components/ui/textarea";
 import { 
   Code2, 
-  Palette, 
-  Smartphone, 
+  Database, 
+  RefreshCcw, 
   Sparkles, 
   Github, 
   Linkedin, 
   Mail,
   Send,
   Menu,
-  X
+  X,
+  Server,
+  Users,
+  Layout,
+  Workflow
 } from "lucide-react";
 import { ProjectCard } from "./components/ProjectCard";
 import { SkillBadge } from "./components/SkillBadge";
@@ -24,26 +28,26 @@ export default function App() {
 
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution with real-time inventory management and payment processing.",
-      image: "https://images.unsplash.com/photo-1658297063569-162817482fb6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlY29tbWVyY2UlMjB3ZWJzaXRlfGVufDF8fHx8MTc2MzY0MDcxMXww&ixlib=rb-4.1.0&q=80&w=1080",
-      tags: ["React", "Node.js", "MongoDB", "Stripe"],
+      title: "Interior Designer Website",
+      description: "Created dynamic site with JavaScript and API integration.",
+      image: "src/images/interior.png",
+      tags: ["HTML", "JavaScript", "DOM", "API"],
       liveUrl: "#",
       githubUrl: "#"
     },
     {
-      title: "Mobile Fitness App",
-      description: "Cross-platform mobile application for workout tracking and nutrition planning with social features.",
-      image: "https://images.unsplash.com/photo-1609921212029-bb5a28e60960?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBkZXNpZ258ZW58MXx8fHwxNzYzNTk3MTQ3fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      tags: ["React Native", "Firebase", "TypeScript"],
+      title: "Photographer's Website",
+      description: "Debugged code and optimized SEO and accessibility.",
+      image: "src/images/wedding.png",
+      tags: ["SEO", "Accessibility", "Optimization"],
       liveUrl: "#",
       githubUrl: "#"
     },
     {
-      title: "Developer Portfolio CMS",
-      description: "Content management system built specifically for developers to showcase projects and blog posts.",
-      image: "https://images.unsplash.com/photo-1643116774075-acc00caa9a7b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMGNvZGV8ZW58MXx8fHwxNzYzNTUyMzg2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      tags: ["Next.js", "Tailwind", "PostgreSQL"],
+      title: "Rental Property Application",
+      description: "Developed React-based SPA with routing and animations.",
+      image: "src/images/kasa.png",
+      tags: ["React", "Sass", "Node.js"],
       liveUrl: "#",
       githubUrl: "#"
     }
@@ -51,25 +55,50 @@ export default function App() {
 
   const skills = {
     frontend: [
+      { name: "HTML", color: "fuchsia" as const },
+      { name: "CSS", color: "fuchsia" as const },
+      { name: "JavaScript", color: "fuchsia" as const },
       { name: "React", color: "fuchsia" as const },
-      { name: "TypeScript", color: "fuchsia" as const },
-      { name: "Next.js", color: "fuchsia" as const },
-      { name: "Tailwind CSS", color: "fuchsia" as const },
-      { name: "Vue.js", color: "fuchsia" as const }
+      { name: "Sass", color: "fuchsia" as const },
+      { name: "Responsive Design", color: "fuchsia" as const },
+      { name: "CSS Animations", color: "fuchsia" as const },
+      { name: "DOM Manipulation", color: "fuchsia" as const }
     ],
     backend: [
       { name: "Node.js", color: "peach" as const },
-      { name: "Python", color: "peach" as const },
-      { name: "PostgreSQL", color: "peach" as const },
+      { name: "Express.js", color: "peach" as const },
       { name: "MongoDB", color: "peach" as const },
-      { name: "GraphQL", color: "peach" as const }
+      { name: "CRUD Operations", color: "peach" as const },
+      { name: "REST APIs", color: "peach" as const },
+      { name: "Data Modeling", color: "peach" as const },
+      { name: "Secure Data Storage", color: "peach" as const }
     ],
-    tools: [
-      { name: "Git", color: "rose" as const },
-      { name: "Docker", color: "rose" as const },
-      { name: "AWS", color: "rose" as const },
-      { name: "Figma", color: "rose" as const },
-      { name: "CI/CD", color: "rose" as const }
+    devtools: [
+      { name: "Git & GitHub", color: "rose" as const },
+      { name: "Chrome DevTools (Debugging)", color: "rose" as const },
+      { name: "SEO Optimization", color: "rose" as const },
+      { name: "Accessibility Best Practices", color: "rose" as const },
+      { name: "Performance Optimization", color: "rose" as const },
+      { name: "Acceptance Testing", color: "rose" as const }
+    ],
+    uxui: [
+      { name: "User Research", color: "fuchsia" as const },
+      { name: "Wireframing", color: "fuchsia" as const },
+      { name: "Prototyping", color: "fuchsia" as const },
+      { name: "Usability Testing", color: "fuchsia" as const },
+      { name: "Interaction Design", color: "fuchsia" as const }
+    ],
+    software: [
+      { name: "Figma", color: "peach" as const },
+      { name: "Sketch", color: "peach" as const },
+      { name: "Adobe", color: "peach" as const }
+    ],
+    sharepoint: [
+      { name: "SharePoint Framework", color: "rose" as const },
+      { name: "Power Automate", color: "rose" as const },
+      { name: "Power Apps", color: "rose" as const },
+      { name: "Custom Web Parts", color: "rose" as const },
+      { name: "Branding & UI Customization", color: "rose" as const }
     ]
   };
 
@@ -80,8 +109,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-2">
-              <Code2 className="w-6 h-6 text-fuchsia-400" />
-              <span className="font-semibold">Alex Chen</span>
+              <span className="font-semibold">Bev Wilson</span>
             </div>
             
             {/* Desktop Navigation */}
@@ -120,28 +148,12 @@ export default function App() {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-fuchsia-500/10 border border-fuchsia-500/20 rounded-full">
-                <Sparkles className="w-4 h-4 text-fuchsia-400" />
-                <span className="text-fuchsia-300">Available for freelance work</span>
-              </div>
               <h1 className="text-5xl lg:text-7xl bg-gradient-to-r from-fuchsia-400 via-rose-400 to-orange-300 bg-clip-text text-transparent">
-                Full-Stack Developer
+                Web + UX Developer
               </h1>
               <p className="text-xl text-zinc-400">
-                Crafting beautiful, performant web applications with modern technologies. 
-                Specialized in React, Node.js, and cloud architecture.
+                UX‑focused Web Developer skilled in building polished, user‑friendly applications with React, TypeScript, and Node.js. Experienced across front‑end and back‑end development, responsive design, SEO optimization, and full project lifecycle management while delivering performant solutions that balance design and engineering.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <Button className="bg-fuchsia-600 hover:bg-fuchsia-700 text-white">
-                  <a href="#contact" className="flex items-center gap-2">
-                    Get in Touch
-                    <Send className="w-4 h-4" />
-                  </a>
-                </Button>
-                <Button variant="outline" className="border-zinc-700 hover:border-fuchsia-500 hover:bg-fuchsia-500/10">
-                  <a href="#projects">View Projects</a>
-                </Button>
-              </div>
               <div className="flex gap-4 pt-4">
                 <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-fuchsia-400 transition-colors">
                   <Github className="w-6 h-6" />
@@ -157,8 +169,8 @@ export default function App() {
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-fuchsia-500 via-rose-500 to-orange-400 rounded-lg opacity-20 blur-2xl" />
               <img 
-                src="https://images.unsplash.com/photo-1641430034785-47f6f91ab6cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3b3Jrc3BhY2UlMjBsYXB0b3B8ZW58MXx8fHwxNzYzNjA1NDQ3fDA&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Workspace"
+                src="src/images/portfolioHome.png"
+                alt="Working"
                 className="relative rounded-lg shadow-2xl"
               />
             </div>
@@ -175,29 +187,56 @@ export default function App() {
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="bg-zinc-900 border-zinc-800 p-6 hover:border-fuchsia-500/50 transition-colors">
               <div className="w-12 h-12 rounded-lg bg-fuchsia-500/10 flex items-center justify-center mb-4">
-                <Code2 className="w-6 h-6 text-fuchsia-400" />
+                <Server className="w-6 h-6 text-fuchsia-400" />
               </div>
-              <h3 className="mb-3">Clean Code</h3>
+              <h3 className="mb-3">Full-Stack Expertise</h3>
               <p className="text-zinc-400">
-                Writing maintainable, scalable code following best practices and industry standards.
+                I specialize in building responsive, dynamic web applications using modern technologies like React for the front end and Node.js with Express for the back end.
               </p>
             </Card>
             <Card className="bg-zinc-900 border-zinc-800 p-6 hover:border-rose-500/50 transition-colors">
               <div className="w-12 h-12 rounded-lg bg-rose-500/10 flex items-center justify-center mb-4">
-                <Palette className="w-6 h-6 text-rose-400" />
+                <Database className="w-6 h-6 text-rose-400" />
               </div>
-              <h3 className="mb-3">Beautiful Design</h3>
+              <h3 className="mb-3">API & Database Integration</h3>
               <p className="text-zinc-400">
-                Creating pixel-perfect, responsive interfaces that users love to interact with.
+                Experienced in creating secure REST APIs and managing data with MongoDB, enabling robust and scalable solutions for complex projects.
               </p>
             </Card>
             <Card className="bg-zinc-900 border-zinc-800 p-6 hover:border-orange-400/50 transition-colors">
               <div className="w-12 h-12 rounded-lg bg-orange-400/10 flex items-center justify-center mb-4">
-                <Smartphone className="w-6 h-6 text-orange-300" />
+                <RefreshCcw className="w-6 h-6 text-orange-300" />
               </div>
-              <h3 className="mb-3">Mobile First</h3>
+              <h3 className="mb-3">Project Management & Agile Delivery</h3>
               <p className="text-zinc-400">
-                Building applications that work seamlessly across all devices and screen sizes.
+                Skilled in planning, writing technical specifications, and managing projects from concept to deployment using Agile and Scrum methodologies.
+              </p>
+            </Card>
+            <Card className="bg-zinc-900 border-zinc-800 p-6 hover:border-fuchsia-500/50 transition-colors">
+              <div className="w-12 h-12 rounded-lg bg-fuchsia-500/10 flex items-center justify-center mb-4">
+                <Workflow className="w-6 h-6 text-fuchsia-400" />
+              </div>
+              <h3 className="mb-3">UX Development</h3>
+              <p className="text-zinc-400">
+                I focus on translating design concepts into functional interfaces using clean, efficient, and reusable code. My approach ensures seamless integration of graphics, layouts, and navigation while maintaining performance and scalability.
+              </p>
+            </Card>
+            <Card className="bg-zinc-900 border-zinc-800 p-6 hover:border-rose-500/50 transition-colors">
+              <div className="w-12 h-12 rounded-lg bg-rose-500/10 flex items-center justify-center mb-4">
+                <Layout className="w-6 h-6 text-rose-400" />
+              </div>
+              <h3 className="mb-3">UI Design</h3>
+              <p className="text-zinc-400">
+                I create intuitive interfaces with clean layouts, icons, and navigation, ensuring a seamless user experience. My work includes delivering clear design specifications for graphics and templates that enhance usability and visual appeal.
+              </p>
+            </Card>
+            <Card className="bg-zinc-900 border-zinc-800 p-6 hover:border-orange-400/50 transition-colors">
+              <div className="w-12 h-12 rounded-lg bg-orange-400/10 flex items-center justify-center mb-4">
+                <Users className="w-6 h-6 text-orange-300" />
+              </div>
+              <h3 className="mb-3">Business & Customer Focus</h3>
+              <p className="text-zinc-400">
+                I analyze requirements to align solutions with user needs and business goals. This includes managing the posting of data, forms, and graphics for applications while building customer-centric experiences that drive engagement and satisfaction.
               </p>
             </Card>
           </div>
@@ -211,7 +250,7 @@ export default function App() {
             Featured <span className="text-rose-400">Projects</span>
           </h2>
           <p className="text-center text-zinc-400 mb-12 max-w-2xl mx-auto">
-            A selection of recent work showcasing my expertise in full-stack development
+            A selection of recent work:
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
@@ -245,9 +284,33 @@ export default function App() {
               </div>
             </div>
             <div>
-              <h3 className="mb-4 text-rose-400">Tools & Platforms</h3>
+              <h3 className="mb-4 text-rose-400">Dev Tools/Practices</h3>
               <div className="flex flex-wrap gap-2">
-                {skills.tools.map((skill, index) => (
+                {skills.devtools.map((skill, index) => (
+                  <SkillBadge key={index} {...skill} />
+                ))}
+              </div>
+            </div>
+            <div>
+              <h3 className="mb-4 text-fuchsia-400">UX/UI</h3>
+              <div className="flex flex-wrap gap-2">
+                {skills.uxui.map((skill, index) => (
+                  <SkillBadge key={index} {...skill} />
+                ))}
+              </div>
+            </div>
+            <div>
+              <h3 className="mb-4 text-orange-300">Software</h3>
+              <div className="flex flex-wrap gap-2">
+                {skills.software.map((skill, index) => (
+                  <SkillBadge key={index} {...skill} />
+                ))}
+              </div>
+            </div>
+            <div>
+              <h3 className="mb-4 text-rose-400">SharePoint</h3>
+              <div className="flex flex-wrap gap-2">
+                {skills.sharepoint.map((skill, index) => (
                   <SkillBadge key={index} {...skill} />
                 ))}
               </div>
@@ -317,7 +380,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto">
           <Separator className="mb-8 bg-zinc-800" />
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-zinc-500">© 2025 Alex Chen. All rights reserved.</p>
+            <p className="text-zinc-500">© 2025 Bev Wilson. All rights reserved.</p>
             <div className="flex gap-6">
               <a href="https://github.com" className="text-zinc-500 hover:text-fuchsia-400 transition-colors">
                 <Github className="w-5 h-5" />
