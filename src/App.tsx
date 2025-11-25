@@ -38,24 +38,24 @@ export default function App() {
       description: "Created responsive web interface.",
       image: bookiImg,
       tags: ["HTML", "CSS", "Responsive"],
-      liveUrl: "#",
-      githubUrl: "#"
+      liveUrl: "https://ms-bev-wilson.github.io/booki/",
+      githubUrl: "https://github.com/ms-bev-wilson/booki"
     },
     {
       title: "Photographer's Website",
       description: "Debugged code and optimized SEO and accessibility.",
       image: weddingImg,
       tags: ["SEO", "Accessibility", "Optimization"],
-      liveUrl: "#",
-      githubUrl: "#"
+      liveUrl: "https://ms-bev-wilson.github.io/photographer-site/",
+      githubUrl: "https://github.com/ms-bev-wilson/photographer-site"
     },
     {
       title: "Rental Property Application",
       description: "Developed React-based SPA with routing and animations.",
       image: kasaImg,
       tags: ["React", "Sass", "Node.js"],
-      liveUrl: "#",
-      githubUrl: "#"
+      liveUrl: "https://ms-bev-wilson.github.io/kasa/",
+      githubUrl: "https://github.com/ms-bev-wilson/kasa"
     }
   ];
 
