@@ -24,20 +24,20 @@ import { ProjectCard } from "./components/ProjectCard";
 import { SkillBadge } from "./components/SkillBadge";
 
 // Import images so Vite bundles them and rewrites URLs for production
-import portfolioHomeImg from "./images/portfolioHome.png";
-import interiorImg from "./images/interior.png";
-import weddingImg from "./images/wedding.png";
-import kasaImg from "./images/kasa.png";
+const portfolioHomeImg = new URL("./images/portfolioHome.png", import.meta.url).href;
+const bookiImg = new URL("./images/booki.png", import.meta.url).href;
+const weddingImg = new URL("./images/wedding.png", import.meta.url).href;
+const kasaImg = new URL("./images/kasa.png", import.meta.url).href;
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const projects = [
     {
-      title: "Interior Designer Website",
-      description: "Created dynamic site with JavaScript and API integration.",
-      image: interiorImg,
-      tags: ["HTML", "JavaScript", "DOM", "API"],
+      title: "Booking Site Frontend",
+      description: "Created responsive web interface.",
+      image: bookiImg,
+      tags: ["HTML", "CSS", "Responsive"],
       liveUrl: "#",
       githubUrl: "#"
     },
