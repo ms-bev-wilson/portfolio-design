@@ -23,6 +23,12 @@ import {
 import { ProjectCard } from "./components/ProjectCard";
 import { SkillBadge } from "./components/SkillBadge";
 
+// Import images so Vite bundles them and rewrites URLs for production
+import portfolioHomeImg from "./images/portfolioHome.png";
+import interiorImg from "./images/interior.png";
+import weddingImg from "./images/wedding.png";
+import kasaImg from "./images/kasa.png";
+
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -30,7 +36,7 @@ export default function App() {
     {
       title: "Interior Designer Website",
       description: "Created dynamic site with JavaScript and API integration.",
-      image: "src/images/interior.png",
+      image: interiorImg,
       tags: ["HTML", "JavaScript", "DOM", "API"],
       liveUrl: "#",
       githubUrl: "#"
@@ -38,7 +44,7 @@ export default function App() {
     {
       title: "Photographer's Website",
       description: "Debugged code and optimized SEO and accessibility.",
-      image: "src/images/wedding.png",
+      image: weddingImg,
       tags: ["SEO", "Accessibility", "Optimization"],
       liveUrl: "#",
       githubUrl: "#"
@@ -46,7 +52,7 @@ export default function App() {
     {
       title: "Rental Property Application",
       description: "Developed React-based SPA with routing and animations.",
-      image: "src/images/kasa.png",
+      image: kasaImg,
       tags: ["React", "Sass", "Node.js"],
       liveUrl: "#",
       githubUrl: "#"
@@ -168,8 +174,8 @@ export default function App() {
             </div>
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-fuchsia-500 via-rose-500 to-orange-400 rounded-lg opacity-20 blur-2xl" />
-              <img 
-                src="src/images/portfolioHome.png"
+              <img
+                src={portfolioHomeImg}
                 alt="Working"
                 className="relative rounded-lg shadow-2xl"
               />
