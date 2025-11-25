@@ -1,0 +1,129 @@
+# Generic .gitignore for common projects
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+dist/
+build/
+.cache/
+.env
+.env.*.local
+npm-debug.log*
+yarn.lock  # remove if you want lockfile tracked
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Java / Gradle / Maven
+*.class
+*.jar
+*.war
+*.ear
+target/
+build/
+.gradle/
+*.iml
+
+# Go
+bin/
+pkg/
+*.exe
+*.test
+
+# Rust
+/target/
+
+# .NET
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.ide
+
+# Ruby
+*.gem
+*.rbc
+.bundle/
+vendor/
+log/
+tmp/
+
+# PHP / Composer
+vendor/
+composer.lock
+
+# C/C++
+*.o
+*.obj
+*.dll
+*.exe
+*.so
+*.dylib
+*.out
+
+# Logs
+*.log
+logs/
+
+# Docker
+docker-compose.override.yml
+docker-compose.*.yml
+docker-compose.*.local.yml
+
+# Terraform
+*.tfstate
+*.tfstate.backup
+.terraform/
+crash.log
+
+# Kubernetes
+*.kubeconfig
+
+# IDEs and editors
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+*.sublime-workspace
+*.sublime-project
+
+# Backup and temp files
+*~
+*.swp
+*.tmp
+*.bak
+*.orig
+
+# Coverage
+coverage/
+coverage.xml
+lcov.info
+
+# Misc
+.project
+.settings/
+.cache/
+node_repl_history
