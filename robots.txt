@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://ms-bev-wilson.github.io/portfolio-design/sitemap.xml
