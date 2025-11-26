@@ -11,12 +11,6 @@
 
   ## Project Structure
 
-  portfolio-design/
-  ├── public/          # Static assets
-  ├── src/
-  │   ├── components/  # Reusable UI components
-  │   ├── pages/       # Page-level components
-  │   ├── styles/      # Global styles
-  │   └── utils/       # Helper functions
-  └── README.md
+  ![project structure](https://github.com/ms-bev-wilson/portfolio-design/blob/main/src/images/projectStructure.png)
+
   
