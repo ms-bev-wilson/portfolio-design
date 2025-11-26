@@ -8,10 +8,6 @@ import {
   Code2, 
   Database, 
   RefreshCcw, 
-  Sparkles, 
-  Github, 
-  Linkedin, 
-  Mail,
   Send,
   Menu,
   X,
@@ -23,7 +19,6 @@ import {
 import { ProjectCard } from "./components/ProjectCard";
 import { SkillBadge } from "./components/SkillBadge";
 
-// Import images so Vite bundles them and rewrites URLs for production
 const portfolioHomeImg = new URL("./images/portfolioHome.png", import.meta.url).href;
 const bookiImg = new URL("./images/booki.png", import.meta.url).href;
 const weddingImg = new URL("./images/wedding.png", import.meta.url).href;
@@ -160,17 +155,6 @@ export default function App() {
               <p className="text-xl text-zinc-400">
                 UX‑focused Web Developer skilled in building polished, user‑friendly applications with React, TypeScript, and Node.js. Experienced across front‑end and back‑end development, responsive design, SEO optimization, and full project lifecycle management while delivering performant solutions that balance design and engineering.
               </p>
-              <div className="flex gap-4 pt-4">
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-fuchsia-400 transition-colors">
-                  <Github className="w-6 h-6" />
-                </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-rose-400 transition-colors">
-                  <Linkedin className="w-6 h-6" />
-                </a>
-                <a href="mailto:alex@example.com" className="text-zinc-400 hover:text-orange-300 transition-colors">
-                  <Mail className="w-6 h-6" />
-                </a>
-              </div>
             </div>
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-fuchsia-500 via-rose-500 to-orange-400 rounded-lg opacity-20 blur-2xl" />
@@ -387,17 +371,6 @@ export default function App() {
           <Separator className="mb-8 bg-zinc-800" />
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-zinc-500">© 2025 Bev Wilson. All rights reserved.</p>
-            <div className="flex gap-6">
-              <a href="https://github.com" className="text-zinc-500 hover:text-fuchsia-400 transition-colors">
-                <Github className="w-5 h-5" />
-              </a>
-              <a href="https://linkedin.com" className="text-zinc-500 hover:text-rose-400 transition-colors">
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="mailto:alex@example.com" className="text-zinc-500 hover:text-orange-300 transition-colors">
-                <Mail className="w-5 h-5" />
-              </a>
-            </div>
           </div>
         </div>
       </footer>
